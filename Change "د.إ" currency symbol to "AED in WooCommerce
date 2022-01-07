@@ -1,0 +1,16 @@
+<?php
+/**
+ * Change "د.إ" currency symbol to "AED in WooCommerce
+ * Add in the main/child Wordpress theme functions.php
+ * Author: Yaser Alhosani
+ */
+ // Start code
+function wc_change_existing_currency_symbol( $currency_symbol, $currency ) {
+    switch( $currency ) {
+        case 'د.إ': $currency_symbol = 'AED'; break;
+    }
+    return $currency_symbol;
+}
+add_filter( 'woocommerce_currency_symbol', 'wc_change_existing_currency_symbol', 10, 1 );
+// End code
+?>
