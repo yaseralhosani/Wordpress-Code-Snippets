@@ -1,6 +1,6 @@
-<?php
 /**
  * WooCommerce - Remove "downloads" from My Account menu items
+ * Add in the main/child Wordpress theme functions.php
  * Author: Yaser Alhosani
  */
 function custom_remove_downloads_my_account( $items ) {
@@ -8,4 +8,3 @@ function custom_remove_downloads_my_account( $items ) {
     return $items;
 }
 add_filter( 'woocommerce_account_menu_items', 'custom_remove_downloads_my_account', 10, 1 );
-?>
