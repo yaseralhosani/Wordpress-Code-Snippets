@@ -1,0 +1,15 @@
+function add_googleanalytics() { ?>
+		
+	<script async src="https://www.googletagmanager.com/gtag/js?id=XX-XXXXXXXX-X"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'XX-XXXXXXXX-X');
+	</script>
+
+<?php
+}
+
+add_action('wp_head', 'add_googleanalytics');
