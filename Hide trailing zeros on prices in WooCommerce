@@ -1,0 +1,9 @@
+<?php
+/**
+ * Hide trailing zeros on prices in WooCommerce
+ * Author: Yaser Alhosani
+ */
+ // Start code
+ add_filter( 'woocommerce_price_trim_zeros', '__return_true' );
+// End code
+?>
