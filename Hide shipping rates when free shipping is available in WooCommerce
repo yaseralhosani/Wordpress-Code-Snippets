@@ -1,7 +1,6 @@
 <?php
 /**
  * Hide shipping rates when free shipping is available in WooCommerce
- * Add in the main/child Wordpress theme functions.php
  * Author: Yaser Alhosani
  * 
  * @param array $rates Array of rates found for the package.
