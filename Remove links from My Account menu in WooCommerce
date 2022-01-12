@@ -1,7 +1,6 @@
 <?php
 /**
  * Remove links from My Account menu in WooCommerce
- * Add in the main/child Wordpress theme functions.php
  * Author: Yaser Alhosani
  */
  // Start code
