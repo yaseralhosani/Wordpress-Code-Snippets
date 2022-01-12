@@ -1,7 +1,6 @@
 <?php
 /**
  * Change existing "د.إ" currency symbol to "AED in WooCommerce
- * Add in the main/child Wordpress theme functions.php
  * Author: Yaser Alhosani
  */
  // Start code
