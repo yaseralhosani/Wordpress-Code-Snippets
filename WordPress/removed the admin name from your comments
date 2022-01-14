@@ -1,0 +1,9 @@
+function remove_comment_author_class( $classes ) {
+    foreach( $classes as $key => $class ) {
+        if(strstr($class, "comment-author-")) {
+            unset( $classes[$key] );
+        }
+    }
+    return $classes;
+}
+add_filter( 'comment_class' , 'remove_comment_author_class' );
