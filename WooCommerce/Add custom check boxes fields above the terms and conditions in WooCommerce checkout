@@ -1,0 +1,23 @@
+add_action('woocommerce_checkout_before_terms_and_conditions', 'checkout_additional_checkboxes');
+function checkout_additional_checkboxes( ){
+    $checkbox1_text = __( "My first checkbox text", "woocommerce" );
+    $checkbox2_text = __( "My Second checkbox text", "woocommerce" );
+    ?>
+    <p class="form-row custom-checkboxes">
+        <label class="woocommerce-form__label checkbox custom-one">
+            <input type="checkbox" class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" name="custom_one" > <span><?php echo  $checkbox1_text; ?></span> <span class="required">*</span>
+        </label>
+        <label class="woocommerce-form__label checkbox custom-two">
+            <input type="checkbox" class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" name="custom_two" > <span><?php echo  $checkbox2_text; ?></span> <span class="required">*</span>
+        </label>
+    </p>
+    <?php
+}
+add_action('woocommerce_checkout_process', 'my_custom_checkout_field_process');
+function my_custom_checkout_field_process() {
+    // Check if set, if its not set add an error.
+    if ( ! $_POST['custom_one'] )
+        wc_add_notice( __( 'You must accept "My first checkbox".' ), 'error' );
+    if ( ! $_POST['custom_two'] )
+        wc_add_notice( __( 'You must accept "My second checkbox".' ), 'error' );
+}
