@@ -1,7 +1,0 @@
-add_filter( 'woocommerce_checkout_fields', 'change_autofocus_checkout_field' );
- 
-function change_autofocus_checkout_field( $fields ) {
- $fields['billing']['billing_first_name']['autofocus'] = false;
- $fields['billing']['billing_email']['autofocus'] = true;
- return $fields;
-}

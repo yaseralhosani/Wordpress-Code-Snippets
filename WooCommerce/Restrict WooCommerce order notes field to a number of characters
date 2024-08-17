@@ -1,5 +1,0 @@
-add_filter( 'woocommerce_checkout_fields', 'filter_checkout_fields' ); 
-function filter_checkout_fields( $fields ) { 
-   $fields['order']['order_comments']['maxlength'] = 180; 
-   return $fields;
-}
