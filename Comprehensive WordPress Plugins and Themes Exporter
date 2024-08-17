@@ -1,5 +1,12 @@
 <?php
 /**
+ * This code snippet adds a tool to the WordPress admin area under the "Tools" menu. The tool
+ * allows users to select and export a detailed HTML report of all installed plugins and themes,
+ * including their active/inactive status. The export also includes additional metadata, such as 
+ * the date and time of export, WordPress version, and the total number of themes and plugins exported.
+ * This tool is ideal for documenting and sharing your WordPress environment configuration with
+ * developers or maintenance or migration purposes.
+ * 
  * Add a menu under Tools named "Export Plugins and Themes" with options to export in HTML.
  */
 
