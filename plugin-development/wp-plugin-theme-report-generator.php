@@ -1,6 +1,6 @@
 <?php
 /**
- * Name: Export Plugins and Themes
+ * Name: WP Plugin & Theme Report Generator
  * Description: This snippet adds a tool to the WordPress admin area that allows site administrators to
  * export detailed reports of all installed plugins and themes, including their active/inactive status,
  * in both HTML and CSV formats. The exported files include summary metadata such as the total number of
