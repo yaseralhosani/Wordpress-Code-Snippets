@@ -195,21 +195,19 @@ function export_plugins_and_themes_page() {
                 top: 40px;
                 right: 20px;
                 font-size: 17px;
+                opacity: 0; /* Initially set opacity to 0 */
             }
 
             .toast.show {
                 visibility: visible;
-                animation: fadein 0.5s, fadeout 0.5s 2.5s;
+                opacity: 1; /* Ensure the toast is fully opaque when shown */
+                transition: opacity 0.5s ease-in-out, visibility 0s linear 0s; /* Adjust transition timing */
             }
 
-            @keyframes fadein {
-                from {opacity: 0;}
-                to {opacity: 1;}
-            }
-
-            @keyframes fadeout {
-                from {opacity: 1;}
-                to {opacity: 0;}
+            .toast.hide {
+                opacity: 0; /* Fade out by setting opacity to 0 */
+                transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s; /* Adjust transition timing */
+                visibility: hidden; /* Hide after the opacity transition */
             }
           </style>';
 
@@ -237,8 +235,12 @@ function export_plugins_and_themes_page() {
 
             function showToast() {
                 var toast = document.getElementById("toast");
-                toast.className = "toast show";
-                setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 4000);
+                toast.classList.remove("hide");
+                toast.classList.add("show");
+                setTimeout(function(){
+                    toast.classList.remove("show");
+                    toast.classList.add("hide");
+                }, 3000);
             }
           </script>';
 }
@@ -363,7 +365,8 @@ function export_plugins_and_themes_csv($selected_themes, $selected_plugins, $exp
     fputcsv($output, ['WordPress Version', $wordpress_version]);
     fputcsv($output, ['Site URL', $site_url]);
     fputcsv($output, ['Exported on', $export_date]);
-    fputcsv($output, []); // Blank line for separation
+    fputcsv($output, []);
+	fputcsv($output, []);
 
     // Add header row for themes and plugins
     fputcsv($output, array('Type', 'Status', 'Name', 'Version', 'Author', 'Author URI', 'URI'));
