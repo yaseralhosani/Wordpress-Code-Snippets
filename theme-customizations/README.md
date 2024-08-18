@@ -6,4 +6,4 @@ Examples: Adding a custom logo, enqueuing styles/scripts, modifying the theme's 
 
 ## Snippets
 
-- [title](title.php): Title.
+- [title](#): Title.
