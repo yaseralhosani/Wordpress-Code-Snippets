@@ -317,7 +317,7 @@ function export_plugins_and_themes_html($selected_themes, $selected_plugins, $ex
     echo '<p><strong>Total Themes:</strong> ' . esc_html(count($selected_themes)) . '</p>';
     echo '<p><strong>Total Plugins:</strong> ' . esc_html(count($selected_plugins)) . '</p>';
     echo '<p><strong>WordPress Version:</strong> ' . esc_html($wordpress_version) . '</p>';
-    echo '<p><strong>Site URL:</strong> ' . esc_html($site_url) . '</p>';
+     echo '<p><strong>Site URL:</strong> <a href="' . esc_url($site_url) . '" target="_blank" rel="noopener">' . esc_html($site_url) . '</a></p>';
     echo '<p><strong>Exported on:</strong> ' . esc_html($export_date) . '</p>';
 
     if (!empty($selected_themes)) {
