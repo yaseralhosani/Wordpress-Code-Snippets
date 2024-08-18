@@ -1,5 +1,5 @@
 <?php
-/**
+/*
  * Name: WP Plugin & Theme Report Generator
  *
  * Description: This snippet adds a tool to the WordPress admin area that allows site administrators to
