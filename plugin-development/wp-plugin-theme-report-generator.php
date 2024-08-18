@@ -80,105 +80,111 @@ function export_plugins_and_themes_page() {
 
     echo '<div id="toast" class="toast">Please select themes or plugins to export.</div>';
 
+    // Updated styling for modern UI
     echo '<style>
             .wrap {
-                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
                 max-width: 800px;
                 margin: 0 auto;
                 background: #ffffff;
-                padding: 20px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                border-radius: 8px;
+                padding: 30px;
+                box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+                border-radius: 12px;
             }
             .export-title {
-                font-size: 2.2em;
-                color: #333;
-                margin-bottom: 10px;
+                font-size: 2.5em;
+                color: #1e293b;
+                margin-bottom: 20px;
             }
             .export-description {
                 font-size: 1.2em;
-                color: #666;
-                margin-bottom: 20px;
+                color: #64748b;
+                margin-bottom: 25px;
             }
             .select-button-container {
-                margin-bottom: 20px;
+                margin-bottom: 25px;
                 display: flex;
                 gap: 10px;
+                justify-content: flex-start;
             }
             .select-all-button, .unselect-all-button {
                 display: inline-block;
-                padding: 10px 20px;
+                padding: 10px 15px;
                 font-size: 1em;
-                border-radius: 4px;
+                border-radius: 6px;
                 color: #fff !important;
                 text-decoration: none;
                 cursor: pointer;
                 transition: background-color 0.3s, box-shadow 0.3s;
             }
             .select-all-button {
-                background-color: #3498db;
+                background-color: #0ea5e9;
             }
             .select-all-button:hover {
-                background-color: #2980b9;
-            }
-            .select-all-button:focus, .select-all-button:active {
-                box-shadow: 0 0 5px #2980b9;
+                background-color: #0284c7;
             }
             .unselect-all-button {
-                background-color: #e74c3c;
+                background-color: #ef4444;
             }
             .unselect-all-button:hover {
-                background-color: #c0392b;
+                background-color: #dc2626;
             }
-            .unselect-all-button:focus, .unselect-all-button:active {
-                box-shadow: 0 0 5px #c0392b;
-            }
+			.select-all-button:focus, .select-all-button:active {
+				outline: none;
+				box-shadow: 0 0 5px rgba(14, 165, 233, 0.75);
+				border-color: #0ea5e9;
+			}
+			.unselect-all-button:focus, .unselect-all-button:active {
+				outline: none;
+				box-shadow: 0 0 5px rgba(239, 68, 68, 0.75);
+				border-color: #ef4444;
+			}
             .section-title {
-                font-size: 1.5em;
-                color: #2c3e50;
-                margin-top: 20px;
-                margin-bottom: 10px;
+                font-size: 1.8em;
+                color: #1e293b;
+                margin-top: 25px;
+                margin-bottom: 15px;
                 border-bottom: 2px solid #ddd;
-                padding-bottom: 5px;
+                padding-bottom: 8px;
             }
             .section-content {
-                margin-left: 10px;
-                margin-bottom: 20px;
+                margin-left: 15px;
+                margin-bottom: 25px;
             }
             .checkbox-label {
                 display: block;
-                margin: 8px 0;
+                margin: 10px 0;
                 font-size: 1.1em;
-                color: #444;
+                color: #475569;
                 cursor: pointer;
                 transition: color 0.3s;
             }
             .checkbox-label:hover {
-                color: #3498db;
+                color: #0ea5e9;
             }
             .status {
-                color: #999;
+                color: #94a3b8;
                 font-size: 0.9em;
             }
             .submit-button-container {
                 text-align: center;
-                margin-top: 20px;
+                margin-top: 25px;
                 display: flex;
                 justify-content: center;
-                gap: 10px;
+                gap: 15px;
             }
             .button-export {
-                background-color: #2ecc71;
+                background-color: #10b981;
                 color: #fff;
-                padding: 12px 30px;
+                padding: 12px 35px;
                 font-size: 1.2em;
                 border: none;
-                border-radius: 4px;
+                border-radius: 8px;
                 cursor: pointer;
                 transition: background-color 0.3s;
             }
             .button-export:hover {
-                background-color: #27ae60;
+                background-color: #059669;
             }
 
             /* Toast Notification Styles */
@@ -188,26 +194,26 @@ function export_plugins_and_themes_page() {
                 background-color: #333;
                 color: #fff;
                 text-align: center;
-                border-radius: 2px;
+                border-radius: 4px;
                 padding: 16px;
                 position: fixed;
                 z-index: 1;
                 top: 40px;
                 right: 20px;
                 font-size: 17px;
-                opacity: 0; /* Initially set opacity to 0 */
+                opacity: 0;
             }
 
             .toast.show {
                 visibility: visible;
-                opacity: 1; /* Ensure the toast is fully opaque when shown */
-                transition: opacity 0.5s ease-in-out, visibility 0s linear 0s; /* Adjust transition timing */
+                opacity: 1;
+                transition: opacity 0.5s ease-in-out, visibility 0s linear 0s;
             }
 
             .toast.hide {
-                opacity: 0; /* Fade out by setting opacity to 0 */
-                transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s; /* Adjust transition timing */
-                visibility: hidden; /* Hide after the opacity transition */
+                opacity: 0;
+                transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s;
+                visibility: hidden;
             }
           </style>';
 
@@ -281,28 +287,22 @@ function export_plugins_and_themes_html($selected_themes, $selected_plugins, $ex
     echo '<!DOCTYPE html>';
     echo '<html><head><title>Plugins and Themes List</title>';
     echo '<style>
-            body, html { margin: 0; padding: 0; font-family: "Segoe UI", Arial, sans-serif; background-color: #f8f9fa; color: #333; }
+            body, html { margin: 0; padding: 0; font-family: "Inter", Arial, sans-serif; background-color: #f3f4f6; color: #1e293b; }
             body { margin: 0; padding: 20px; width: calc(100% - 40px); }
-            h1 { text-align: center; margin-bottom: 20px; font-size: 34px; color: #2980b9; }
-            h2 { font-size: 22px; color: #2c3e50; }
-            table { border-collapse: collapse; width: 100%; background-color: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; table-layout: fixed; }
-            th, td { padding: 12px 15px; text-align: left; word-wrap: break-word; }
-            th { background-color: #2980b9; color: white; font-weight: 600; text-transform: uppercase; }
-            td { border-bottom: 1px solid #e0e0e0; }
-            td:first-child { font-weight: 500; }
-            th:nth-child(2), td:nth-child(2) { width: 30%; }
-            th:nth-child(1), th:nth-child(3), th:nth-child(4), th:nth-child(5), th:nth-child(6),
-            td:nth-child(1), td:nth-child(3), td:nth-child(4), td:nth-child(5), td:nth-child(6) { width: 14%; }
-            tr:nth-child(even) { background-color: #f7f7f7; }
-            tr:hover { background-color: #eaf2f8; }
-            .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0; font-size: 14px; color: #666; }
+            h1 { text-align: center; margin-bottom: 30px; font-size: 36px; color: #1d4ed8; }
+            h2 { font-size: 24px; color: #0f172a; margin-top: 40px; }
+            table { border-collapse: collapse; width: 100%; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); }
+            th, td { padding: 15px 20px; text-align: left; }
+            th { background-color: #1d4ed8; color: white; font-weight: 600; text-transform: uppercase; font-size: 14px; }
+            td { border-bottom: 1px solid #e2e8f0; font-size: 16px; color: #475569; }
+            tr:nth-child(even) { background-color: #f1f5f9; }
+            tr:hover { background-color: #e2e8f0; }
+            .footer { margin-top: 50px; padding-top: 30px; border-top: 1px solid #e2e8f0; font-size: 14px; color: #6b7280; text-align: center; }
           </style>';
     echo '</head><body>';
 
-    // Site name at the top center
     echo '<h1>' . esc_html($site_name) . '</h1>';
 
-    // Export Summary Section
     echo '<h2>Summary</h2>';
     echo '<p><strong>Total Themes:</strong> ' . esc_html(count($selected_themes)) . '</p>';
     echo '<p><strong>Total Plugins:</strong> ' . esc_html(count($selected_plugins)) . '</p>';
@@ -310,7 +310,6 @@ function export_plugins_and_themes_html($selected_themes, $selected_plugins, $ex
     echo '<p><strong>Site URL:</strong> ' . esc_html($site_url) . '</p>';
     echo '<p><strong>Exported on:</strong> ' . esc_html($export_date) . '</p>';
 
-    // Exported content starts here
     if (!empty($selected_themes)) {
         echo '<h2>Themes</h2>';
         echo '<table>';
