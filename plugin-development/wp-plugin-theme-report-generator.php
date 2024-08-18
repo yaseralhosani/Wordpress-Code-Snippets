@@ -366,7 +366,7 @@ function export_plugins_and_themes_csv($selected_themes, $selected_plugins, $exp
     fputcsv($output, ['Site URL', $site_url]);
     fputcsv($output, ['Exported on', $export_date]);
     fputcsv($output, []);
-	fputcsv($output, []);
+    fputcsv($output, []);
 
     // Add header row for themes and plugins
     fputcsv($output, array('Type', 'Status', 'Name', 'Version', 'Author', 'Author URI', 'URI'));
