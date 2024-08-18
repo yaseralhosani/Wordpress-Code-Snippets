@@ -5,4 +5,4 @@ Examples: Registering custom post types, creating shortcodes, adding settings pa
 
 ## Snippets
 
-- [WP Plugin & Theme Report Generator](plugin-development/wp-plugin-theme-report-generator.php): Title.
+- [WP Plugin & Theme Report Generator](wp-plugin-theme-report-generator.php): Generates detailed HTML and CSV reports of installed WordPress plugins and themes, including their active/inactive status and site metadata.
