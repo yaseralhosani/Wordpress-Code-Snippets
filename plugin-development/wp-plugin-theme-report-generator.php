@@ -15,13 +15,12 @@
  *      - Adds a new tool under the "Tools" menu in the WordPress admin area.
  *      - Provides a simple form interface where users can select which plugins and themes to export.
  *   2. Export Options:
- *      - Supports exporting data in both HTML and CSV formats.
- *      - The HTML export is formatted for readability with styled tables and headers, the content will open in a new tab for viewing.
- *      - The CSV export includes a summary section with key site information.
+ *      - The HTML export opens in a new tab for easy viewing.
+ *      - The CSV export creates a downloadable spreadsheet.
  *   3. Toast Notifications:
- *      - Implements a toast notification that alerts the user if no plugins or themes are selected before export, ensuring a smooth user experience.
+ *      - Provides a toast notification to alert users if no plugins or themes are selected, preventing errors and enhancing usability.
  *   4. Detailed Metadata:
- *      - Both HTML and CSV exports include metadata such as the WordPress version, site URL, export date, and the number of active/inactive themes and plugins.
+ *      - Exports contain detailed metadata, including WordPress version, site URL, export date, and the status of each plugin and theme (active/inactive).
  */
 
 // Add the "Export Plugins and Themes" option to the Tools menu
