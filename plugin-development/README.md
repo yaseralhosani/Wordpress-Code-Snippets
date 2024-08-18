@@ -5,4 +5,4 @@ Examples: Registering custom post types, creating shortcodes, adding settings pa
 
 ## Snippets
 
-- [title](#): Title.
+- [WP Plugin & Theme Report Generator](plugin-development/wp-plugin-theme-report-generator.php): Title.
