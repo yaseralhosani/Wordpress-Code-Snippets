@@ -297,6 +297,16 @@ function export_plugins_and_themes_html($selected_themes, $selected_plugins, $ex
             td { border-bottom: 1px solid #e2e8f0; font-size: 16px; color: #475569; }
             tr:nth-child(even) { background-color: #f1f5f9; }
             tr:hover { background-color: #e2e8f0; }
+
+            /* Adjusting column widths */
+            th:nth-child(2), td:nth-child(2) {
+                width: 40%; /* The "Name" column gets 40% of the width */
+            }
+            th:nth-child(1), th:nth-child(3), th:nth-child(4), th:nth-child(5), th:nth-child(6),
+            td:nth-child(1), td:nth-child(3), td:nth-child(4), td:nth-child(5), td:nth-child(6) {
+                width: 12%; /* The rest of the columns share the remaining width equally */
+            }
+
             .footer { margin-top: 50px; padding-top: 30px; border-top: 1px solid #e2e8f0; font-size: 14px; color: #6b7280; text-align: center; }
           </style>';
     echo '</head><body>';
