@@ -1,26 +1,18 @@
 <?php
 /*
- * Name: WP Plugin & Theme Report Generator
+ * Plugin Name: WP Plugin & Theme Report Generator
  *
- * Description: This snippet adds a tool to the WordPress admin area that allows site administrators to
- * export detailed reports of all installed plugins and themes, including their active/inactive status,
- * in both HTML and CSV formats. The exported files include summary metadata such as the total number of
- * plugins and themes, the WordPress version, and the site URL. This tool is particularly useful for 
- * sharing WordPress configuration details with developers, maintenance, migration purposes, or general.
+ * Description: A powerful WordPress tool for exporting detailed reports of installed plugins and themes.
+ * Generate reports in HTML or CSV format, with the option to send them via email. Ideal for sharing WordPress 
+ * configuration details with developers, maintenance, migration purposes, or general.
  *
- * Category: Plugin Development
- *
- * Key Points and Features:
- *   1. User-Friendly Interface:
- *      - Adds a new tool under the "Tools" menu in the WordPress admin area.
- *      - Provides a simple form interface where users can select which plugins and themes to export.
- *   2. Export Options:
- *      - The HTML export opens in a new tab for easy viewing.
- *      - The CSV export creates a downloadable spreadsheet.
- *   3. Toast Notifications:
- *      - Provides a toast notification to alert users if no plugins or themes are selected, preventing errors and enhancing usability.
- *   4. Detailed Metadata:
- *      - Exports contain detailed metadata, including WordPress version, site URL, export date, and the status of each plugin and theme (active/inactive).
+ * Features:
+ *   - Adds a new tool in the "Tools" menu for easy access.
+ *   - Export reports as HTML or CSV files.
+ *   - Includes metadata: WordPress version, site URL, export date, and plugin/theme status.
+ *   - Provides toast notifications for user feedback.
+ * Next:
+ *   - Option to email the report with attachments.
  */
 
 // Add the "Export Plugins and Themes" option to the Tools menu
