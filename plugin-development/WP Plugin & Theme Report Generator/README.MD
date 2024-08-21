@@ -14,13 +14,6 @@ This code snippet adds a feature to your WordPress site that allows you to expor
 - **Modern UI Design**: 
   - The UI is styled for a clean and modern look, improving the user experience.
 
-## Usage
-
-1. **Add the Snippet**: Copy the provided PHP code into your theme’s `functions.php` file or into a code snippest plugin.
-2. **Access the Export Tool**: After adding the code, go to `Tools > Export Plugins and Themes` in your WordPress dashboard.
-3. **Select Items**: Choose the themes and plugins you wish to include in the report.
-4. **Export Report**: Click on the export button to generate the report in your desired format (HTML or CSV). If no items are selected, a toast notification will prompt you to make a selection.
-
 ## Code Overview
 
 - **Menu Addition**: The snippet adds a new option in the WordPress admin under `Tools`.
