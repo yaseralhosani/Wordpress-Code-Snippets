@@ -1,37 +1,41 @@
-# WP Plugin & Theme Report Generator
+# WP Plugin & Theme Report Generator Snippet
 
-WP Plugin & Theme Report Generator is a powerful WordPress plugin designed to help you generate detailed reports of your installed plugins and themes. Whether you're a developer, site administrator, or need to share WordPress configuration details for maintenance or migration, this tool provides a simple yet comprehensive solution.
+This code snippet adds a feature to your WordPress site that allows you to export detailed reports of your installed plugins and themes. It's an ideal solution for developers, site administrators, or anyone needing to share WordPress configuration details for maintenance or migration purposes.
 
 ## Features
 
-- **Easy Access**: Integrates seamlessly into the WordPress "Tools" menu.
-- **Flexible Export Options**: Export detailed reports in both HTML and CSV formats.
-- **Comprehensive Metadata**: Reports include WordPress version, site URL, export date, and the active/inactive status of plugins and themes.
-- **User Feedback**: Toast notifications provide real-time feedback during the report generation process.
-- **Convenient Selection**: Easily select or deselect all plugins and themes with dedicated buttons.
-
-## Installation
-
-1. Download the plugin ZIP file from the [GitHub releases page](#).
-2. In your WordPress dashboard, navigate to `Plugins > Add New > Upload Plugin`.
-3. Upload the ZIP file, install, and activate the plugin.
+- **Tools Menu**: Adds an "Export Plugins and Themes" option under the "Tools" menu for quick access.
+- **Export Options**:
+  - Generate reports in HTML or CSV format.
+  - Include essential metadata like WordPress version, site URL, export date, and the status of each plugin and theme.
+- **User-Friendly Interface**:
+  - Options to select or unselect all themes and plugins.
+  - Toast notifications to guide user actions and prevent errors.
+- **Modern UI Design**: 
+  - The UI is styled for a clean and modern look, improving the user experience.
 
 ## Usage
 
-1. Go to `Tools > WP Plugin & Theme Report Generator` in your WordPress dashboard.
-2. Select the plugins and themes you wish to include in the report.
-3. Choose the desired export format (HTML or CSV).
-4. Click the "Export" button to generate the report.
-5. If no plugins or themes are selected, a toast notification will guide you to select them.
+1. **Add the Snippet**: Copy the provided PHP code into your theme’s `functions.php` file or into a code snippest plugin.
+2. **Access the Export Tool**: After adding the code, go to `Tools > Export Plugins and Themes` in your WordPress dashboard.
+3. **Select Items**: Choose the themes and plugins you wish to include in the report.
+4. **Export Report**: Click on the export button to generate the report in your desired format (HTML or CSV). If no items are selected, a toast notification will prompt you to make a selection.
 
-## Future Updates
+## Code Overview
 
-- **Email Report**: The upcoming update will allow you to send the generated report as an email attachment directly from the plugin.
+- **Menu Addition**: The snippet adds a new option in the WordPress admin under `Tools`.
+- **Export Functionality**: Allows exporting selected plugins and themes as either an HTML or CSV report.
+- **UI and Notifications**: Provides a user-friendly interface with select/unselect options and real-time notifications.
 
-## Contributing
+## Customization
 
-Found a bug or have a feature request? Feel free to open an issue on the [GitHub repository](#). Contributions are always welcome!
+You can customize the appearance and functionality by modifying the CSS styles and the PHP functions in the snippet. For example, you can add more metadata to the reports or change the styling to better match your WordPress theme.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](#) file for details.
+This code snippet is provided under the MIT License. You are free to use, modify, and distribute it as needed.
+
+## Contributing
+
+If you have suggestions for improvements or encounter any issues, feel free to submit a pull request or open an issue in the repository.
+
