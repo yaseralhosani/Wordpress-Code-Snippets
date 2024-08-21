@@ -1,6 +1,6 @@
 # WP Plugin & Theme Report Generator
 
-**WP Plugin & Theme Report Generator** is a robust WordPress plugin designed to export detailed reports of your installed plugins and themes. It is perfect for sharing configuration details with developers, handling site maintenance, facilitating migrations, or keeping general records.
+WP Plugin & Theme Report Generator is a powerful WordPress plugin designed to help you generate detailed reports of your installed plugins and themes. Whether you're a developer, site administrator, or need to share WordPress configuration details for maintenance or migration, this tool provides a simple yet comprehensive solution.
 
 ## Features
 
